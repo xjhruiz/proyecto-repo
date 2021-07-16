@@ -9,7 +9,7 @@ COMANDO BASICOS GIT
 git status -> Comprueba el estado de un repositorio
 git add -> Agrega los nuevos archivos al repositorio llevando así un control sobre ellos.
 git commit -> Agrega al repositorio los cambios en archivos que se han modificado
-git push -> Subde los archivos al repositorio origen en nuestro caso  GitHub.
+git push -> Sude los archivos al repositorio origen en nuestro caso  GitHub.
 git pull -> descarga los archivos del repositorio junto con los cambios que otros usuarios hayan realizado en él.
 git stash -> deshace los cambios no guardados.
 git init -> crea un nuevo repositorio vacío.
