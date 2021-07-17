@@ -86,6 +86,10 @@ por defecto solo se crea una con * indica la rama en la que uno está.
 
 git branch -d nombreRamaAEliminar -> elimina una rama !!!!!JAMAS ELIMINAR LA RAMA MASTER!!!!
 
+git push <remote> --delete <branch>
+
+$ git push origin --delete fix/authentication
+
 git checkout nombreRamaACambiar -> Cambia o Crear si esa rama no existe 
 git checkout -b nombreRamaACrearVacia -> flag -b indica que se quiere crear una rama vacía, seguido del nombre de la rama
 $ git checkout -b pruebas 
