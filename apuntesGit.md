@@ -1,11 +1,11 @@
-¿Como funciona git?
+ <h1> ¿Como funciona git? </h1>
 También es conocido como  VCS version control system
 Es muy parecido al protoco FTP,: Entorno Local ⇋ Aplicación FTP ⇋ Entorno de Producción pero de otra forma, con un Repositorio  entorno local <-> Repositorio <-> Entorno de Prodiccion
 Repositorio Origen, el repositorio local es la copia de este
 Para sincronizar el código con el repositorio origen, se debe de sincronizar el repositorio origen con el local, se conoce como push (sincronaizer = push)
 pull, sincroniza el repositorio origen con el de Producción
 
-COMANDO BASICOS GIT 
+<h1> COMANDO BASICOS GIT </h1>
 git status -> Comprueba el estado de un repositorio
 git add -> Agrega los nuevos archivos al repositorio llevando así un control sobre ellos.
 git commit -> Agrega al repositorio los cambios en archivos que se han modificado
@@ -17,15 +17,15 @@ git config -> Configurar diversos aspectos de Git.
 git remote -> Siver para configurar un repositorio remoto asociado a un repositorio local. 
 
 
-CREAR UN NUEVO REPOSITORIO  DESDE GIT BASH fALLO
+ <h1> CREAR UN NUEVO REPOSITORIO  DESDE GIT BASH fALLO </h1>
 
 git init
 git commit -m 'primer commit'
 git remote add origin git@github.com:NombreCuentaUsuario/<nombreRepositorio>.git
 git push -u origin master
 
-AÑADIR NUEVOS FICHEROS AL REPOSITORIO 
-
+<h1> AÑADIR NUEVOS FICHEROS AL REPOSITORIO  </h1>
+ 
 Añadir todos los archivos modificados git add .
 Añadir un archivo en específico git add nombreArchivo.extension
 Añadir solo 2 o x archivos git add nombreArchivo1.extension nombreArchivo2.extension ... NombreCarpeta/nombreArchivo3.extension
@@ -34,11 +34,11 @@ git commit agrega los cambios en los archivos.
 git commit -m "Mensaje Commit"
 -m -> flag que permite introducir un mensaje en la propia linea de comandos, si no se pone se abriría un editado con Vim :S :q!
 
-ELIMINAR CAMBIOS SIN COMITEARLOS
+<h1> ELIMINAR CAMBIOS SIN COMITEARLOS </h1>
 
 git stash -> siempre que no se haya hecho un commit, se puede eliminar los cambios que se hayan realizado.
 
-SINCRONIZAR EL CÓDIGO DEL REPOSITORIO ORIGEN AL REPOSITORIO LOCAL 
+<h1> SINCRONIZAR EL CÓDIGO DEL REPOSITORIO ORIGEN AL REPOSITORIO LOCAL  </h1>
 
 git pull actualiza el repositorio local con el repositorio origen. Si un usuario ha modificado el repositorio origen y 
 no tienes esos cambios, lo ideal es hacer primero el git pull y luego trabajar sobre el código bueno.
@@ -52,7 +52,7 @@ git pull https://github.com/xjhruiz/proyecto-repo.git master
 //configura la información de seguimiento para esta rama.
 git branch --set-upstream-to=origin/<branch> master 
 
-CREAR UN REPOSITORIO EN MI SERVIDOR
+<h1> CREAR UN REPOSITORIO EN MI SERVIDOR </h1>
 
 Se necesita tener acceso mediante ssh a tu servidor o cuenta de hosting, suele estar en la misma zona que los datos de acceso mediante FTP
 
@@ -78,7 +78,7 @@ bastará con hacer un pull desde la terminal mediante ssh y dejar a un lado ftp 
 (IMPORTANTE DIFERENCIAR RAMAS para no alterar codigo de Producción)
 
 
-RAMAS QUÉ SON Y CÓMO CREARLAS
+<h1> RAMAS QUÉ SON Y CÓMO CREARLAS </h1>
 
 git branch -> muestra la rama actual en la que uno está.
 * master 
@@ -93,13 +93,13 @@ $ git branch
   master
 * pruebas
 
-VISUALIZAR DIFERENCIAS ENTRE RAMAS
+<h1> VISUALIZAR DIFERENCIAS ENTRE RAMAS </h1>
 
 git diff --stat master pruebas -> muestra las diferencias que hay entre las ramas por pantalla.
 Muestra las línas modificadas y aquellos ficheros que ha sido agregados o eliminados. 
 
 
-FUSIONAR CAMBIOS ENTRE RAMAS "MERGEAR" CAMBIOS
+<h1> FUSIONAR CAMBIOS ENTRE RAMAS "MERGEAR" CAMBIOS </h1>
 
 Para integrar los cambios de una rama a otra, de pruebas a master siempre hay que probar que dichos cambios funcionen correctamente y no alteren otras funcionalidades
 Se hace un branch merging, mezclar o integrar ramas en la rama master. 
@@ -111,7 +111,7 @@ $ git merge pruebas
 Una vez integrado los cambios de la rama pruebas a la rama master, se puede borrar esa rama. 
 git branch -d pruebas
 
-SOLUCIÓN DE CONFLICTOS
+<h1> SOLUCIÓN DE CONFLICTOS </h1>
 
 Modifico el fichero index.html y hago un commit de los cambios y un push a la RamaA 
 
@@ -148,13 +148,13 @@ Seleccio Aceptar ambios cambios, depende de cada caso.
 y se vuelve a hacer el git add . o solo el fichero
 git commit -m "Solucionar conflictos entre ramas durante merge"
 
-DESHACER UN MERGEA
+<h1> DESHACER UN MERGEA </h1>
 
 Es aconsejable crear una copia de la rama en la que se va a integrar los cambios, por si algo va mal.
 git reset --hard HEAD -> Permite volver a un paso anterior a realizar el merge 
 el flag --hard HEAD devuelve los archivos del directorio de tu proyecto al punto anterir del merge.
 
-DESHACER UN COMMIT 
+<h1> DESHACER UN COMMIT </h1>
 
 GIT RESET
 
@@ -181,7 +181,7 @@ Las opciones para MODE son:
 
 Hay que tener cuidado con --hard y git reset, ya que se puede perder código escrito.
 
-GIT REVERT
+<h1> GIT REVERT </h1>
 Si se ha subido el commit al repositorio remoto, es aconsejable usar git revert, ya que facilita el manejo del historial de los commit 
 git revert -> deshace los cambios realizados por un commit anterior creando un commit completamente nuevo, sin alterar el historial de commit.
 Aunque depende de cada casuistica querras hacer una cosa u otra.
@@ -197,6 +197,6 @@ opciones comunes:
 -n evita que cree un nuevo commit y solo deshace el commit anterior y lo añadira en el directorio de trabajo  
 -no-commit
 
-MÁS COMANDOS DE GIT VISITAR
+ <h1> MÁS COMANDOS DE GIT VISITAR </h1>
 
 https://sethrobertson.github.io/GitFixUm/fixup.html#remove_last
