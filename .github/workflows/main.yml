@@ -1,0 +1,24 @@
+name: PruebaCI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo "Prueba CI"
+    - name: ejecutar multiples lineas
+      run: |
+        echo Agregar otra accion,
+        echo segunda linea de la accion.
+        
+        
+     
